@@ -1,0 +1,19 @@
+{
+    "githubIssues.queries": [
+        {
+            "label": "我的问题",
+            "query": "is:open assignee:${user} repo:${owner}/${repository}",
+            "groupBy": [
+                "milestone"
+            ]
+        },
+        {
+            "label": "已创建问题",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "最新问题",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ]
+}
